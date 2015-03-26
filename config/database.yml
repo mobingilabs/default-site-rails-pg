@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: pg-ruby-app_production
-  username: pg-ruby-app
-  password: <%= ENV['PG-RUBY-APP_DATABASE_PASSWORD'] %>
+  database: <%= ENV['MOCLOUD_DATABASE_NAME'] %>
+  username: <%= ENV['MOCLOUD_DATABASE_USERNAME'] %>
+  password: <%= ENV['MOCLOUD_DATABASE_PASSWORD'] %>
+  host: <%= ENV['MOCLOUD_DATABASE_ADDRESS'] %>
+  port: <%= ENV['MOCLOUD_DATABASE_PORT'] %>
